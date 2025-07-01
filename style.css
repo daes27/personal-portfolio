@@ -1,0 +1,252 @@
+@font-face{
+    src: url(fonts/Oswald-VariableFont_wght.ttf);
+    font-family: OswaldSans;
+}
+
+
+*{
+    /* asterisks means all elements, used for general formatting*/
+    box-sizing: border-box;
+    /* can do this to reset formatting
+    margin:0;
+    padding:0;
+    */
+}
+
+header{
+    overflow:hidden;
+    background-color: bisque;
+    min-height: 5em;
+}
+
+#title{
+    margin-top: 40px;;
+}
+
+body{
+    background-color:aliceblue;
+    display:flow-root;
+    border: 3px dotted;
+    margin:0px;
+    /* padding between element and itself and any borders, border, margins are outside borders/space around element */
+    
+}
+
+
+h1{
+    text-align: center;
+    color:black;
+    font-weight: bold;
+    font-family: "Rubik" ;
+    text-shadow:1px 1px red, -2px -2px rgb(71, 255, 246);
+   
+   
+}
+
+.navbar ul{
+    list-style-type: none;
+    background-color: rgb(46, 46, 46);
+    padding: 0px;
+    margin:0px;
+    overflow:hidden;
+}
+
+.navbar a{
+    color:white;
+    text-decoration: none;
+    padding:15px;
+    display:block;
+    text-align: center;
+}
+
+.navbar a:hover{
+    background-color: grey;
+}
+
+.navbar li{
+    float:left;
+}
+
+/* To style by id use #, for classes use .*/
+
+#p1{
+    color:black;
+    font-family:OswaldSans;
+}
+
+.para{
+    color:red;
+    font-family: "Rubik";
+    border-right: 3px solid rgb(78, 141, 93);
+}
+
+#p3{
+    border-style: solid;
+    border-width: 2px;
+    border-color: purple;
+    border-radius: 5px;
+
+}
+
+#photo{
+    float:left;
+    width:300px;
+    height:400px;
+    background-color: rgb(209, 209, 209);
+    box-shadow: 2px 2px 3px;
+    margin-right: 2em;
+}
+
+/* Make sure to have the px and em next to the number otherwise won't read it properly*/
+
+.container{
+    background-image: url(images/The\ Well.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size:cover;
+    height:100vh /* vh stands for viewheight, so 100%*/
+}
+
+.box{
+    border: 3px solid;
+    font-size: 5em;
+    width: 50%;
+    height: auto;
+    padding:25px;
+    text-align: center;
+    box-sizing: border-box;
+    margin-bottom: 2em;
+    
+}
+
+#box2{
+    background-color: aqua;
+    float:left;
+}
+
+#box3{
+    background-color: red;
+    float:right;
+}
+
+#img1{
+    width:200px;
+    height:300px;
+    margin-right: 16px;
+    margin-left:2em;
+    float:left;
+}
+
+#summary{
+    border: 2px solid;
+    height: 150px;
+    overflow:auto;
+
+    /*hidden, scroll, auto, clip along with clip-margin
+    display can be block taking up whole space/line, or span only needed space required. div vs span
+    inlie-block will give it characteristics (highet and width) but still be inline
+
+    for width and height can set using px, em or % like 50%. but won't display properly two 50% if theres a border width (taken into account)
+    padding is space between content and border
+
+
+    pseudo classes like active or hover can create some visual change like making something appear(e.g. display from none to block/inline)
+    
+    selector::active
+    where selector is like header or h2
+    
+    windows key + semi colon gives emojis
+    */
+
+    
+}
+
+#language li::before{
+    content:"✅";
+}
+
+#language li::marker{
+    content:"🤺";
+    color: green;
+    font-size:2em;
+}
+
+#python::after{
+    content:"🐍";
+}
+
+#html::after{
+    content:"🏠";
+}
+
+#css::after{
+    content:"🎨";
+}
+
+.pages{
+    text-align:center;
+
+}
+
+.pages a{
+    color:black;
+    text-decoration: none;
+    padding: 8px 15px;
+    display: inline-block;
+
+}
+
+.pages a.active{
+
+    background-color: rgba(96, 181, 255, 0.656);
+    font-weight: bold;
+    border-radius: 5px;
+    
+}
+
+.pages a:hover:not(.active){
+    background-color: rgba(168, 168, 158, 0.656);
+    border-radius: 5px;
+}
+
+
+/* make navigation bar, website layout, interactive image gallery, transformation and animation*/
+
+.dropdown button{
+    background-color: hsl(0, 0%, 80%);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.dropdown .content{
+    display:none;
+    background-color: hsl(0, 0%, 95%);
+    position: absolute;
+    min-width: 100px;
+    box-shadow: 2px 2px 5px hsl(0, 0%, 0%, 80%);
+    /* horizontal vertical then blur*/
+
+}
+
+.dropdown:hover .content{
+    display:block;
+}
+
+.dropdown:hover button{
+    background-color: hsl(0, 0%, 70%);
+}
+
+
+.dropdown a:hover{
+    background-color: hsl(0, 0%, 90%);
+}

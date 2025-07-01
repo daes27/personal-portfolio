@@ -1,0 +1,287 @@
+<!DOCTYPE html>  <!-- used to declare html and that everything inside exudes certain html characteristics -->
+<!--CSS gives the detaisl and javascript gives the functionality-->
+
+<!--CSS has inline (within the tags <>), internal (like a function within the head portion), external (similar to internal but instead of head its done in a seperate file, needs to be linked but is reusable for multiple html files)-->
+
+<!-- span = adds markup to text or portion of document-->
+ <!-- div = outlines/defines a division of a document-->
+
+
+<html lang="en">
+    <head>
+        <!--meta tags in head section, tell info abt the website-->
+        <meta charset="utf-8"> <!-- converts english number and symbols to 8 bit -->
+        <meta name="viewport" content="width-device-width, initial-scale=1"> <!-- converts it so the website scales/displays according to device scale being 1 means starts not zommed-->
+        <meta name="description" content="Practice Portfolio">
+        <meta name="keywords" content="Tyler Fong, Portfolio, Experience, Work">
+        <meta name="author" content="Tyler Fong">
+        <meta http-equiv="refresh" content="5">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+        <!--can add link of fonts in head or download file and upload them and link-->
+
+         <title>
+            Tyler's website
+         </title>
+
+         <!-- <style>
+            body{
+                font-family:Cambria;
+            }
+            
+            p{
+                color: rgb(0, 0, 0);
+            }
+         </style> -->
+    </head>
+    
+    <body>
+    <!--stylise text but now not used so much due to css-->
+    <!--mainly just use h1 to h3 -->
+        <header style="position: relative; top: -20px">
+
+            <h1 id="title">
+                Welcome to Tyler's Portfolio
+            </h1>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="">Resume</a></li>
+                    <li><a href="">LinkedIn</a></li>
+                    <li><a href="">GitHub</a></li>
+                    <li><a href="">Contact Me</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <main>
+
+            <img id=photo alt="Profile photo" title="Selfie" src="images/profile photo.jpg" height="400" width="300" border=1>
+            <h3>About Me:</h3>
+            <p>Thanks for taking the time to look through my website :). I love my gf so much and she inspired me to work on my skills and learn more and put myself out there. Thank you so much bb</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, inventore cum. Dignissimos nam expedita neque fuga aut quis deserunt laudantium, quo ducimus repellat rem in eius animi tenetur odit eaque?</p>
+
+
+        </main>
+
+
+        
+
+        <!--Alt + Z to toggle word wrap or go to settings and command pallette and click toggle word wrap-->
+
+        <form>
+            <div>
+            <!--for atr same as id, good for acccessibiltiy screenreaders and if you click on label it goes to box. name= assigns it like a variable  -->
+            <!--id attributes whatever you need to address in HTML, name is used as the identified for post or get, when you are updating the URL-->
+            <label for="name">Name: </label>
+            <input type="text" id="name" name="fname" placeholder="e.g. Tyler" required>
+            </div><br>
+
+            <div>
+            <label for="prog">Program: </label>
+            <input type="text" id="prog" name="program" placeholder="e.g. Elec and IBio" required>
+            </div><br>
+
+            <!--also type=email or tel for phone number or date for a calendar-->
+            <!--number can set the min max and value= for the initial value -->
+            <dib>
+                <label for="pass">Password:</label>
+                <input type="password" id="pass" name="pass" maxlength="8" required>
+            </dib><br><br>
+
+            <div>
+                <!--same name so that you only have one choice cant select them all-->
+                <label for="title">Status:</label>
+
+                <label for="single">Single</label>
+                <input id="single" type="radio" name="relationship" value="single">
+
+                <label for="dating">Relationship</label>
+                <input id="dating" type="radio" name="relationship" value="dating">
+
+                <label for="married">Married</label>
+                <input id="married" type="radio" name="relationship" value="married">
+
+            </div>
+
+            <div>
+                <label for="reason">Reason for visiting:</label>
+                <select id="reason" name="reason">
+                    <option value="chill">Chilling</option>
+                    <option value="job">Research candidate</option>
+                    <option value="notes">Stalking</option>
+                </select>
+
+            </div>
+
+            <div>
+                <input type="submit">
+            </div><br>
+
+
+            <div>
+                <input type="reset">
+            </div>
+
+        </form>
+
+        <br>
+        <b><i>day one or one day </i> </b>
+
+        <br><br>
+        <button onclick="love()" style="background-color:rgb(179, 51, 151); border-width:5px; border-radius: 10px;"> Hey cutie <3 </button>
+        
+        <p id="note"> I love you </p>
+
+        <script>
+            function love(){
+                document.getElementById("note").innerHTML = "Mwah";
+            }
+
+        </script>
+
+
+        <hr>
+
+        <div class="dropdown">
+            <button>About Me</button>
+            <div class="content">
+                <a href="">Hobbies</a>
+                <a href="">Life story</a>
+                <a href="">Blog</a>
+            </div>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam fuga corrupti maxime vitae harum ratione voluptates voluptatum. Perspiciatis deleniti nisi tenetur placeat maiores expedita repellendus ullam similique, voluptatum, explicabo fugiat?</p>
+
+        </div>
+
+
+        <h2 style="background-color: #c9c8bd;">
+        Projects
+        </h2>
+    
+        <h3>
+        Stocks Filter
+        </h3>
+    
+        <h4 id="summary">
+        Summary: Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia omnis odio vitae necessitatibus quas. Laborum, reiciendis eius. Voluptatum non tempore perferendis natus atque, corporis commodi, aut ab ullam expedita dolore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, temporibus. Molestiae, delectus tempore. Ipsam incidunt eveniet repellendus nemo, asperiores corporis at ullam. Nihil saepe molestias quisquam itaque exercitationem consequatur repellendus. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, sequi nemo! Harum corrupti provident cum officia minus, distinctio mollitia consectetur repellat ad, pariatur repellendus veritatis reiciendis id itaque delectus quisquam! Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia omnis odio vitae necessitatibus quas. Laborum, reiciendis eius. Voluptatum non tempore perferendis natus atque, corporis commodi, aut ab ullam expedita dolore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, temporibus. Molestiae, delectus tempore. Ipsam incidunt eveniet repellendus nemo, asperiores corporis at ullam. Nihil saepe molestias quisquam itaque exercitationem consequatur repellendus. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, sequi nemo! Harum corrupti provident cum officia minus, distinctio mollitia consectetur repellat ad, pariatur repellendus veritatis reiciendis id itaque delectus quisquam! Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </h4>
+        
+        <h4 style="color: rgb(52,119,235);">
+        Sourced from yahoo finance
+        </h4>
+
+        <!--in the future put a src image and then have that photo linked to the page-->
+        <a target="_blank" href="p1.html">
+            Stock Filter
+        </a>
+
+        <h5>
+        Skills developped:
+        </h6>
+
+        <h5>
+        Continous learning:
+        </h6>
+
+        <div class="box" id="box2">box2</div>
+        <div class="box" id="box3">box3</div>
+        
+        <div class="container">
+            <div>
+                <img id=img1 alt="SumoBot" title="SumoBot" src="images/sumo bot1.jpg"  border=1>
+            </div>
+        </div>
+        
+
+        <div style="background-color: beige;">
+            <p id="p1">
+                <!-- p = Paragraph 1 line between paragraphs, br for line break -->
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+            <hr> <!--horizontal line-->
+            <p id="p2" class="para"><br><br>
+                <!-- p = Paragraph 1 line between paragraphs, br for line break -->
+                <span style="color: rgb(148, 118, 163)">Lorem Ipsum is simply dummy text of the printing and typesetting industry </span>. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+
+            <p id="p3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis laboriosam aut, fugiat optio sunt atque ab dolore voluptatibus culpa nobis maxime cupiditate omnis, odit amet eveniet! Fugiat minima reprehenderit unde!</p>
+
+        </div>
+    
+        <!--style tages, b or strong = bold, i or em = italics, u = underline -->
+        <br>
+        <a target='_blank' href="https://docs.google.com/document/d/1qnx9D3sYLBCjbyAVpbvZ4Him-cZqun9q3CG2qRMmr78/edit?usp=sharing">
+            <!--anchor href or hypertext reference is the url, target makes a new page instead of changing the current one. inside a block is the text-->
+            Resume
+
+        </a>
+        <br><br>
+        <img src="https://placehold.co/600x400" border=10>
+        <!-- src means source, can also place a file name if the file is in the same folder, not best practice tho-->
+        
+        <!-- unordered lists bullet point, ordered is numbers, ol or ul, li for list items-->
+        <ul id="language">
+            <li id="python">Python</li>
+                <ul>
+                    <li>yfinance</li>
+                    <li>beautifulsoup4</li>
+                </ul>
+            <li id="html">HTML</li>
+            <li id="css">CSS</li>
+        </ul>
+        <!--tr = table row, th = table header, td=table data. want same number of columns in each row-->
+        <!--cell padding is the amt of extra space in the cell, cellspacing is space between cells-->
+        <table border="2" cellpadding="10" cellspacing="0">
+            <tr>
+                <th colspan="2">Responsable</th>
+                <th>Passionate</th>
+                <th>Hardworking</th>
+                <th>Detail Oriented</th>
+            </tr>
+
+            <tr>
+                <td>Observing class</td>
+                <td>Cleaning up</td>
+                <td>Side projects</td>
+                <td>Group work</td>
+                <td>Lesson plan development</td>
+            </tr>
+        </table>
+
+        <br><br>
+        <a target="_blank" href="https://www.linkedin.com/in/tylerfong07/">
+        <button style="background-color: rgb(124, 163, 118); color: rgb(0, 0, 0); border-radius:20px; height: 100px ; width: 200px; font-family:Times New Roman, sans-serif; font-size:50px; border-width: 5px"> LinkedIn </button>
+        </a>
+        <br><br>
+        <!--comma gives backup fonts in case webpage can't load it, em is like percent so 1.1 em is 110% normal size-->
+        
+        <!--go over div and span, buttons and forms-->
+        <!--go over CSS and try to make the website look nicer-->
+
+        <footer style="background-color: rgb(227, 209, 183);">
+            <hr>
+            Telephone: ###
+            Email: fongt5@mcmaster.ca
+
+            <div class="pages">
+                <a href=""><</a>
+                <a href="index.html"  class="active">1</a>
+                <a href="p1.html">2</a>
+                <a href="">3</a>
+                <a href="">4</a>
+                <a href="">5</a>
+                <a href="p1.html">></a>
+
+            </div>
+
+        </footer>
+
+
+    </body>
+
+</html>
